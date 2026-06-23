@@ -246,10 +246,15 @@ async function handleImportFile(e) {
   }
 }
 
+// Live Stripe checkout for TabForge Pro ($4.99 one-time). Kept here as the single
+// source of truth for the in-extension purchase entry point; mirrors stripe.json
+// and the landing page CTA.
+const CHECKOUT_URL = 'https://buy.stripe.com/8x2eVe9Da7AZbxY21ObAs0g';
+
 function handleUpgrade() {
-  // Pro purchase flow — opens the Stripe payment link (wired in Phase 5).
-  // After purchase, the success page deep-links back to flip the pro flag.
-  const url = (window.TABFORGE_CHECKOUT_URL || 'https://tabforge.app/upgrade');
+  // Pro purchase flow — opens the Stripe payment link in a new tab.
+  // window.TABFORGE_CHECKOUT_URL lets a future build override the link without a code change.
+  const url = (typeof window !== 'undefined' && window.TABFORGE_CHECKOUT_URL) || CHECKOUT_URL;
   chrome.tabs.create({ url });
 }
 
