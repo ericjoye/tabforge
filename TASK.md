@@ -40,7 +40,7 @@ Build a Chrome extension called **"TabForge"** — a tab management productivity
 ## Phases (do in order)
 
 ### Phase 1: Research & Plan (5 min)
-- Read the existing a11y-annotator extension at /home/ericjoye/businesses/a11y-annotator/ to understand the pattern
+- Read the existing a11y-annotator extension to understand the pattern
 - Study Chrome extension manifest v3 format
 - Plan the file structure
 - Write a plan to plan.md
@@ -70,7 +70,7 @@ Create these files:
 
 ### Phase 5: Monetization Setup (5 min)
 - Create a Stripe payment link for $4.99 one-time purchase
-  (Use the existing Stripe setup — keys are in /home/ericjoye/businesses/.secret_store.py)
+  (Use the existing Stripe setup)
 - Update landing page with payment link
 - Write a launch plan (where to post, what to say)
 

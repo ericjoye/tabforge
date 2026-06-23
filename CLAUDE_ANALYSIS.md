@@ -1,7 +1,7 @@
 # Claude Code Build Analysis — TabForge Extension
 
 > Built by Claude Code in ~12 minutes of active work (23:40 - 23:46, June 22 2026)
-> Workspace: /home/ericjoye/businesses/claude-workspace/
+> Workspace: claude-workspace/
 
 ## What Was Built
 

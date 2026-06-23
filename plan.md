@@ -91,7 +91,7 @@ claude-workspace/
 - `landing.html`, `store-listing.md`, `launch-plan.md`, `log.md`.
 
 ## Phase 5 — Monetization
-- Create a $4.99 one-time Stripe payment link via keys in `/home/ericjoye/businesses/.secret_store.py`.
+- Create a $4.99 one-time Stripe payment link via existing Stripe setup
 - Wire link into landing page + Pro unlock flow.
 
 ## Key risks & mitigations
