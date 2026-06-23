@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabForge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="brand-mark">⚒</span>
+      <div class="brand-text">
+        <h1>TabForge</h1>
+        <p>Save &amp; restore tab sessions</p>
+      </div>
+    </div>
+    <button id="settings-toggle" class="icon-btn" title="Settings" aria-label="Settings">⚙</button>
+  </header>
+
+  <!-- Toast / status line -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Save bar -->
+  <section class="save-bar">
+    <input id="session-name" class="name-input" type="text"
+           placeholder="Name this session…" maxlength="120" autocomplete="off">
+    <button id="save-btn" class="btn btn-primary">Save</button>
+  </section>
+
+  <!-- Settings panel (hidden by default) -->
+  <section id="settings-panel" class="settings hidden">
+    <label class="setting-row">
+      <span>Auto-save this window</span>
+      <input id="autosave-toggle" type="checkbox" class="switch">
+    </label>
+    <label class="setting-row">
+      <span>Every</span>
+      <span class="interval-wrap">
+        <input id="interval-input" type="number" class="interval-input" min="1" max="1440" step="1">
+        <span class="muted">min</span>
+      </span>
+    </label>
+    <div class="setting-actions">
+      <button id="export-btn" class="btn btn-ghost">Export</button>
+      <button id="import-btn" class="btn btn-ghost">Import</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+    </div>
+    <div id="pro-banner" class="pro-banner">
+      <strong>TabForge Pro</strong>
+      <span>Unlimited sessions · 1-min auto-save · cloud sync</span>
+      <button id="upgrade-btn" class="btn btn-pro">Upgrade · $4.99</button>
+    </div>
+  </section>
+
+  <!-- Session list -->
+  <main class="list-wrap">
+    <div class="list-head">
+      <span id="session-count" class="muted">No sessions yet</span>
+      <button id="clear-all" class="link-btn hidden">Clear all</button>
+    </div>
+    <ul id="session-list" class="session-list"></ul>
+    <div id="empty-state" class="empty">
+      <div class="empty-mark">⚒</div>
+      <p>No saved sessions.</p>
+      <p class="muted">Click <strong>Save</strong> or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> restore last</span>
+    <span id="plan-tag" class="plan-tag">Free</span>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

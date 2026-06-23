@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "TabForge — Tab Session Manager",
+  "version": "1.0.0",
+  "description": "Save & restore tab sessions in one click. Auto-save, export/import, keyboard shortcuts. Fast, private, developer-focused.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TabForge — Save & restore tab sessions",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "save-session": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Save the current window as a session"
+    },
+    "restore-last": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Command+Shift+R"
+      },
+      "description": "Restore the most recent session"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

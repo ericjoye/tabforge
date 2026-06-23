@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TabForge — Tab Session Manager for Chrome</title>
+<meta name="description" content="Save & restore tab sessions in one click. Auto-save, export/import, keyboard shortcuts. Fast, private, developer-focused.">
+<style>
+:root{--bg:#0f1117;--bg2:#171a23;--text:#e6e9f0;--dim:#9aa3b5;--accent:#6366f1;--accent2:#818cf8;--pro:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.header{background:linear-gradient(135deg,#4338ca,#6366f1,#7c3aed);padding:48px 24px;text-align:center}
+.header h1{font-size:2.4em;font-weight:800;color:#fff;letter-spacing:-1px}
+.header p{color:rgba(255,255,255,0.85);font-size:1.1em;margin-top:8px}
+.badge{display:inline-block;background:var(--pro);color:#1a1206;padding:4px 14px;border-radius:20px;font-size:.75em;font-weight:700;margin-top:12px}
+.features{max-width:720px;margin:40px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:var(--bg2);border:1px solid #2a3040;border-radius:12px;padding:24px}
+.card h3{font-size:1.1em;margin-bottom:8px}
+.card p{color:var(--dim);font-size:.9em}
+.cta{text-align:center;padding:48px 24px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:10px;font-size:1.1em;font-weight:700;text-decoration:none;transition:background .15s}
+.btn:hover{background:var(--accent2)}
+.price{color:var(--dim);margin-top:8px;font-size:.9em}
+.faq{max-width:600px;margin:40px auto;padding:0 24px}
+.faq h2{text-align:center;margin-bottom:24px}
+.faq-item{background:var(--bg2);border:1px solid #2a3040;border-radius:10px;padding:16px 20px;margin-bottom:12px}
+.faq-item summary{font-weight:600;cursor:pointer}
+.faq-item p{color:var(--dim);margin-top:8px;font-size:.9em}
+.footer{text-align:center;padding:32px;color:var(--dim);font-size:.85em}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>⚒ TabForge</h1>
+  <p>Save & restore tab sessions in one click. Developer-focused. Private. Fast.</p>
+  <span class="badge">Chrome Extension · Manifest V3</span>
+</div>
+
+<div class="features">
+  <div class="card"><h3>💾 Save Sessions</h3><p>Save all tabs in your current window as a named session. One click or Ctrl+Shift+S.</p></div>
+  <div class="card"><h3>↻ Restore Anytime</h3><p>Restore any session into a fresh window. Your current workspace stays untouched.</p></div>
+  <div class="card"><h3>⏰ Auto-Save</h3><p>Automatically save your session on a schedule. Never lose your tabs again.</p></div>
+  <div class="card"><h3>📤 Export / Import</h3><p>Export sessions as JSON. Import on another machine. Your data, your control.</p></div>
+  <div class="card"><h3>⌨️ Keyboard Shortcuts</h3><p>Ctrl+Shift+S to save, Ctrl+Shift+R to restore last session. Stay in flow.</p></div>
+  <div class="card"><h3>🛡️ Privacy First</h3><p>No accounts. No cloud. All data stored locally in your browser. Zero tracking.</p></div>
+</div>
+
+<div class="cta">
+  <a class="btn" href="https://buy.stripe.com/8x2eVe9Da7AZbxY21ObAs0g" target="_blank">Get TabForge Pro — $4.99</a>
+  <p class="price">One-time purchase. Free tier available with 5 sessions.</p>
+</div>
+
+<div class="faq">
+  <h2>FAQ</h2>
+  <details class="faq-item"><summary>What's the free tier?</summary><p>Save up to 5 sessions with auto-save every 15 minutes. Perfect for trying TabForge out.</p></details>
+  <details class="faq-item"><summary>What does Pro include?</summary><p>Unlimited sessions, auto-save as frequent as 1 minute, cloud sync (coming soon), and priority support.</p></details>
+  <details class="faq-item"><summary>Where is my data stored?</summary><p>All data stays in your browser's local storage. Session metadata syncs across your own Chrome devices via chrome.storage.sync. We NEVER see your tabs.</p></details>
+  <details class="faq-item"><summary>Does it work with other extensions?</summary><p>Yes. TabForge uses standard Chrome APIs and plays nicely with all other extensions.</p></details>
+</div>
+
+<div class="footer">
+  TabForge by ShipStack · Built with ❤️ for developers · <a href="#" style="color:var(--dim)">Privacy</a> · <a href="#" style="color:var(--dim)">Support</a>
+</div>
+</body>
+</html>
